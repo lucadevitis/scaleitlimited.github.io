@@ -1,0 +1,47 @@
+---
+layout: raw
+---
+    <div id="wrap">
+{% include header.html container_class="container" logo_col_size="auto" navbar_justify="start" %}
+      <main id="content" class="content">
+			  <section class="vc_row fullheight d-flex flex-wrap align-items-center bg-cover bg-center mb-60" style="background-image: url(./assets/demo/bg/bg-22.jpg);" data-parallax="true" data-parallax-options='{ "parallaxBG": true }'>
+			  	<div class="container">
+			  		<div class="row">
+
+			  			<div class="lqd-column col-md-7 col-lg-6">
+
+			  				<h2
+			  					class="text-white font-weight-bold"
+			  					data-fittext="true"
+			  					data-fittext-options='{"compressor":0.5,"maxFontSize":"60","minFontSize":"36"}'
+			  					data-split-text="true"
+			  					data-split-options='{"type":"chars, words"}'
+			  					data-custom-animations="true"
+			  					data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","delay":"28","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":23,"rotateZ":7,"opacity":0},"animations":{"translateY":0,"rotateZ":0,"opacity":1}}'>
+			  					{{ page.slogan }}
+			  				</h2>
+			  				<p
+			  					class="font-size-19 lh-175 text-white pr-md-7 mr-md-5 mb-5"
+			  					data-split-text="true"
+			  					data-split-options='{"type":"lines"}'
+			  					data-custom-animations="true"
+			  					data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","startDelay":"0","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":80,"rotateZ":4,"opacity": 0},"animations":{"translateY":0,"rotateZ":0, "opacity": 0.7}}'>
+			  					{{ page.synopsis }}
+                  <br>
+			  						<a href="/contacts.html" class="font-size-15 mt-60 btn btn-solid text-uppercase semi-round font-weight-semibold text-dark px-1 bg-hover-white bg-gradient-primary-lr">
+			  							<span>
+			  								<span class="btn-txt">Get in Touch</span>
+			  								<span class="btn-icon"><i class="fa fa-angle-right"></i></span>
+			  							</span>
+			  						</a>
+			  				</p>
+
+			  			</div><!-- /.col-md-7 col-lg-6 -->
+
+			  		</div><!-- /.row -->
+			  	</div><!-- /.container -->
+			  </section>
+{{ content }}
+      </main><!-- /#content.content -->
+{% include footer.html %}
+    </div><!-- /#wrap -->

@@ -1,0 +1,24 @@
+---
+layout: raw
+---
+    <div id="wrap">
+
+{% include header.html container_class="container-fluid" logo_col_size="md-1" navbar_justify="left" %}
+
+      <main id="content" class="content">
+        <section class="titlebar titlebar-md scheme-light text-center mb-30" data-parallax="true" data-parallax-options='{ "parallaxBG": true }' style="background-image: url(/assets/demo/bg/bg-53.jpg);">
+          <div class="liquid-row-overlay" style="background:rgba(9, 17, 35, 0.645)"></div>
+          <div class="titlebar-inner">
+            <div class="container titlebar-container">
+              <div class="row titlebar-container">
+                <div class="titlebar-col col-md-12">
+                  <h1 data-fittext="true" data-fittext-options='{ "maxFontSize": 55, "minFontSize": 32 }'>{{ page.title }}</h1>
+                </div><!-- /.titlebar-col -->
+              </div><!-- /.titlebar-row -->
+            </div><!-- /.titlebar-container -->
+          </div><!-- /.titlebar-inner -->
+        </section><!-- /.titlebar -->
+{{ content }}
+      </main><!-- /#content.content -->
+{% include footer.html %}
+    </div><!-- /#wrap -->

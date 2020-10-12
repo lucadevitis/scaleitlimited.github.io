@@ -1,0 +1,46 @@
+---
+layout: leaflet
+---
+      <section class="vc_row py-40">
+        <div class="container">
+          <div class="row">
+            
+            <div class="lqd-column col-md-6 mt-20">
+
+              <p class="font-size-18 lh-2 ltr-sp-01 pr-md-7 mr-md-4">
+{{ page.synopsis | markdownify }}
+              </p>
+    
+            </div><!-- /.lqd-column col-md-6 col-md-offset-1 -->
+
+            <div class="lqd-column col-md-5 col-md-offset-1 mt-30">
+
+              <div class="lqd-frickin-img" data-inview="true">
+                <div class="lqd-frickin-img-inner">
+                  <span class="lqd-frickin-img-bg bg-gradient-primary-br"></span>
+                  <div class="lqd-frickin-img-holder">
+                    <figure data-responsive-bg="true">
+                      <img src="/assets/demo/misc/fi-2.jpg" alt="{{ page.title }}">
+                    </figure>
+                  </div><!-- /.lqd-frickin-img-holder -->
+                </div><!-- /.lqd-frickin-img-inner -->
+              </div><!-- /.lqd-frickin-img -->
+
+            </div><!-- /.lqd-column col-md-5 -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+      <section class="vc_row py-40">
+        <div class="container">
+          <div class="row">
+            <div class="lqd-column col-md-12">
+{% comment %} FIXME: This should not be necessary {% endcomment %}
+{{ page.content | markdownify }}
+            </div><!-- /.lqd-column col-md-5 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+
+{% include case_studies.html %}
+{% include testimonials.html %}

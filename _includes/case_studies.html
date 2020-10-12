@@ -1,0 +1,79 @@
+{% assign on_topic = 0 %}
+{% assign case_studies = "" %}
+{% assign prevNextButtons = "false" %}
+{% assign cellAlign = "left" %}
+{% assign listed_case_studies = site.case_studies | where: "list", "true" %}
+{% for case_study in listed_case_studies %}
+  {% if case_study.topics contains page.topic %}
+    {% assign on_topic = on_topic | plus: 1 %}
+    {% capture item %}
+                  <div class="carousel-item col-md-3 col-sm-6 col-xs-12 mb-4">
+                    <div class="fancy-box fancy-box-heading-custom fancy-box-classic">
+                      <div class="cb-img-container mb-4">
+                        <figure class="fancy-box-image loaded">
+                          <img src="/assets/demo/misc/carousel-item-22.jpg" alt="{{ case_study.title }}">
+                        </figure>
+                        <div class="cb-img-btn">
+                          <div class="cb-img-btn-bg"></div>
+                          <a href="{{ case_study.url }}" class="liquid-overlay-link"></a>
+                          <div class="cb-img-btn-inner">
+                            <a href="{{ case_study.url }}" class="btn btn-naked ld_button_5c7fc49d34c89">
+                              <span>
+                                <span class="btn-txt">Learn more</span>
+                                <span class="btn-icon"><i class="fa fa-angle-right"></i></span>
+                              </span>
+                            </a>
+                          </div><!-- /.cb-img-btn-bg -->
+                        </div><!-- /.cb-img=btn -->
+                      </div><!-- /.cb-img-container -->
+                      <div class="fancy-box-contents">
+                        <div class="fancy-box-header">
+                          <h3 class="font-weight-normal font-size-20 mb-3">{{ case_study.title }}</h3>
+                          <p>{{ case_study.synopsis }}</p>
+                        </div><!-- /.fancy-box-header -->
+                      </div><!-- /.fancy-box-contents -->
+                    </div><!-- /.fancy-box -->
+                  </div><!-- /.lqd-column col-md-4 -->
+    {% endcapture %}
+    {% assign case_studies = case_studies | append: item %}
+  {% endif %}
+{% endfor %}
+
+{% case on_topic %}
+  {% when 1 %}
+    {% assign cellAlign = "center" %}
+  {% when 2 %}
+    {% comment %} FIXME: ugly patch for an ugly bug {% endcomment %}
+    {% assign cellAlign = "right" %}
+  {% when 3 %}
+    {% assign cellAlign = "center" %}
+{% endcase %}
+
+{% if on_topic > 4 %}
+  {% assign prevNextButtons = "true" %}
+{% endif %}
+
+{% if on_topic > 0 %}
+      <section id="case-studies" class="vc_row pt-100 pb-30">
+        <div class="container">
+          <div class="row">
+
+            <div class="lqd-column col-md-6 col-md-offset-3 text-center mb-50">
+
+              <header class="fancy-titlec">
+                <h2 class="mt-0 mb-3">Case Studies</h2>
+              </header>
+
+            </div><!-- /.col-md-6 col-md-offset-3 -->
+            <div class="lqd-column col-md-12">
+
+              <div id="case-studies-carousel-thumbs" class="carousel-container carousel-nav-center carousel-nav-md carousel-nav-bordered carousel-nav-circle carousel-dots-style1">
+                <div class="carousel-items row" data-lqd-flickity='{"cellAlign":"{{ cellAlign }}","prevNextButtons":{{ prevNextButtons }},"buttonsAppendTo":"self","pageDots":false,"groupCells":false,"wrapAround":true,"pauseAutoPlayOnHover":false,"controllingCarousels":["#case-studies-carousel-thumbs"],"navArrow":"6"}'>
+  {{ case_studies }}
+                </div><!-- /.carousel-items -->
+              </div><!-- /.carousel-container -->
+            </div><!-- /.lqd-column col-md-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+{% endif %}

@@ -1,0 +1,75 @@
+{% assign on_topic = 0 %}
+{% assign testimonials = "" %}
+{% assign autoPlay = "6000" %}
+{% assign pageDots = "false" %}
+{% assign cellAlign = "center" %}
+{% assign listed_testimonials = site.testimonials | where: "list", "true" %}
+{% for testimonial in listed_testimonials %}
+  {% if testimonial.topics contains page.topic or page.topic == "all" %}
+    {% assign on_topic = on_topic | plus: 1 %}
+    {% capture item %}
+                  <div class="carousel-item lqd-column col-md-6 col-sm-12 mb-4">
+                    <div class="testimonial testimonial-quote-filled text-center">
+                      <div class="testimonial-quote bg-light">
+                        <blockquote class="text-center font-size-16 lh-175">
+                          <p>{{ testimonial.content }}</p>
+                        </blockquote>
+                      </div><!-- /.testimonial-quote -->
+                      <div class="testimonial-details">
+                          <figure class="avatar">
+                            <img src="{{ testimonial.picture }}" alt="{{ testimonial.full_name }}">
+                          </figure>
+                          <div class="testimonial-info">
+                            <a href="{{ testimonial.link }}">
+                              <h5>{{ testimonial.full_name }}</h5>
+                              <h6 class="font-weight-normal">{{ testimonial.company }}</h6>
+                            </a>
+                          </div>
+                      </div>
+                    </div>
+                  </div><!-- /.lqd-column col-md-4 -->
+    {% endcapture %}
+    {% assign testimonials = testimonials | append: item %}
+  {% endif %}
+{% endfor %}
+{% if on_topic > 2 %}
+  {% assign pageDots = "true" %}
+{% else %}
+  {% assign autoPlay = "false" %}
+{% endif %}
+{% if on_topic > 1 %}
+  {% assign cellAlign = "left" %}
+{% endif %}
+{% if on_topic > 0 %}
+      <section class="vc_row pt-55 pb-80" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":".lqd-column","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":52,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
+        <div class="container">
+
+          <div class="row">
+
+            <div class="lqd-column col-md-6 col-md-offset-3">
+
+              <header class="fancy-title text-center mb-60">
+                <h2>Testimonials</h2>
+              </header>
+
+            </div><!-- /.lqd-column col-md-6 col-md-offset-3 -->
+
+          </div><!-- /.row -->
+
+          <div class="row">
+
+            <div class="lqd-column col-md-12">
+
+              <div id="testimonials-carousel-thumbs" class="carousel-container carousel-nav-center carousel-nav-md carousel-dots-sm carousel-dots-style2 carousel-dots-center">
+                <div class="carousel-items row" data-lqd-flickity='{"cellAlign":"{{ cellAlign }}","prevNextButtons":false,"buttonsAppendTo":"self","pageDots":{{ pageDots }},"groupCells":false,"wrapAround":true,"pauseAutoPlayOnHover":false,"controllingCarousels":["#testimonials-carousel-thumbs"],"autoPlay":{{ autoPlay }}}'>
+  {{ testimonials }}
+                </div><!-- /.carousel-items -->
+              </div><!-- /.carousel-container -->
+
+            </div><!-- /.col-md-6 -->
+
+          </div><!-- /.row -->
+
+        </div><!-- /.container -->
+      </section>
+{% endif %}
