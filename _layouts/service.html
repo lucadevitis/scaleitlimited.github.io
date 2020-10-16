@@ -29,10 +29,10 @@ layout: leaflet
           </div><!-- /.row -->
         </div><!-- /.container -->
       </section>
+
       <section class="vc_row py-40">
         <div class="container">
           <div class="row" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":".lqd-column","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":44,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
-
             <div class="lqd-column col-md-12">
 {% comment %} FIXME: This should not be necessary {% endcomment %}
 {{ page.content | markdownify }}
@@ -41,6 +41,15 @@ layout: leaflet
         </div><!-- /.container -->
       </section>
 
-{% include case_studies.html %}
+      <section class="vc_row py-40">
+        <div class="container">
+          <div class="row">
+            <div class="lqd-column col-md-12">
+            </div><!-- /.lqd-column col-md-5 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+
 {% include how.html %}
+{% include case_studies.html %}
 {% include testimonials.html %}
