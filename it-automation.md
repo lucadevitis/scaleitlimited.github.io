@@ -13,10 +13,10 @@ layout: service
 
 ---
 
-## How can you succede in IT Automation?
+## What can be helpful to succede in IT Automation?
 
-There are many habits that can help you transition from manual IT operation to IT
-Automation:
+There are many habits that can help you to successfuly transition from **manual**
+IT operation to **IT Automation**:
 
 Define a simple and testable objective/outcome
 : Arguably the most important of the pre-requisites. It cannot be stressed
