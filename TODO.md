@@ -1,0 +1,22 @@
+- Professional Voice Mail message
+- Setup call screen / cleanup the background
+- Produce content:
+  - Brand Bootstrap
+    - Domain registration
+    - Office 365 / GSuite
+    - Logo / Image
+    - Site template (wordpres)
+    - SSL
+    - Privacy
+    - Pictures
+    - Write your content:
+      - Vision / Why
+      - Mission
+      - Priorities
+      - Milestones
+      - Principles
+      - What you do
+      - How you do it
+  - IT Best Practices
+    - README
+    - ...
