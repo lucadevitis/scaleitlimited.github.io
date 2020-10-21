@@ -29,6 +29,14 @@ The coachee is always in charge
   provides no input, but rather helps the coachees to find their own way, at
   their own pace.
 
+Adult to Adult conversations
+: Our coaching is a strictly non-directive relationship. We believe that
+  coachees can reach their objectives on their own, and enjoy the empowering
+  feeling that comes with the fact that they don't have to share the credits
+  with enybody other then temselves. We pledge to keep a positive attitude,
+  encourage the development of new perspectives and maintain a strictly
+  non-judgemental line of questioning.
+
 Coaching conversation are structured
 : Our coaching sessions follow a specific structure that is designed to allow
   the coachee to clearly identify and overcome all the biases that hinder their
@@ -68,4 +76,4 @@ Confidence
 : Leading, Public Speaking and Presentation
 
 Career
-: Advancement, change, burn-out
+: Advancement, Change, Burn-out
