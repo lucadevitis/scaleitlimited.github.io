@@ -17,12 +17,12 @@ layout: how
 
 ## How is Coaching with us?
 
-Our coaching starts from the position of believing that people have the ability to
+Coaching starts from the position of believing that people have the ability to
 address and resolve their own issues if they can approach them in the right
 mental state. The success of our coaching comes form putting the
 coachee in charge of their own improvements, encourage a positive attitude, and
-keep them focused. Let us highlight some of the properties of performance
-coaching with us:
+keep them focused. Let us highlight some of the properties of our coaching
+sessoins:
 
 The coachee is always in charge
 : This is a staple caracteristic of any of our coaching session; the coach
@@ -55,19 +55,19 @@ Confidential
   and any information pertaining the coachee.
 
 Total dedication
-: We conduct our sessions from an calm and relaxed environment without any form
-  of distraction; each session lasts an average of 30 minutes and we want to
+: We conduct our sessions from a calm and relaxed environment without any form
+  of distraction; each session lasts an average of 30 minutes, and we want to
   spend all that time to maximize your chances of success.
 
 Remember all your progresses
-: We encourage all the coachees to bring pen and paper to each session an take
-  notes, but we know that something may slip through. This is why we record
+: We encourage all the coachees to bring pen and paper to each session and take
+  notes, but we know that something may slip through. Luckily, we record
   each session and make it available to our coachees.
 
 ## What can we coach you for?
-IT is the environment we love and we want to see thrive, and for that reason we
-decided to focus our coaching on one specialty: the people we feel close to, IT
-people.
+IT is the environment we love, and we want to see thrive, and for that reason we
+decided to focus our coaching on one speciality: the people we feel close to, IT
+people. Here are some example areas:
 
 Performance
 : Personal, Business, Engagement
@@ -77,3 +77,6 @@ Confidence
 
 Career
 : Advancement, Change, Burn-out
+
+If unsure, drop us a message: we'll be happy to have a quick chat with you and
+clear your doubts.
