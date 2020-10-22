@@ -82,6 +82,9 @@ encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 strict_front_matter: false
 
+page_excerpts: true
+excerpt_separator: <!--more-->
+
 # Filtering Content
 show_drafts: null
 limit_posts: 0
