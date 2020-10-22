@@ -1,7 +1,12 @@
 ---
 title: IT Bootstrap
-synopsis: Praesent pharetra risus pharetra orci ultrices, vel pharetra.
+synopsis: >-
+  **You should not be here, this section is not ready**
+img: /assets/img/misc/fi-it-bootstrap.jpg
 layout: service
 
 ---
-Praesent pharetra risus pharetra orci ultrices, vel pharetra.
+
+## Bootstrapping your IT department and infrastructure
+
+**You should not be here, this section is not ready**
