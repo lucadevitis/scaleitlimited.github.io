@@ -91,10 +91,6 @@ limit_posts: 0
 future: false
 unpublished: false
 
-# Plugins
-whitelist: []
-plugins: []
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
@@ -133,3 +129,26 @@ kramdown:
   hard_wrap: false
   footnote_nr: 1
   show_warnings: false
+
+# Plugins
+whitelist: []
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-paginate
+
+jekyll-archives:
+  enabled: all
+  layouts:
+    year: year-posts-archive
+    month: month-posts-archive
+    day: day-posts-archive
+    category: category-posts-archive
+    tag: tag-posts-archive
+  permalinks:
+    year: '/posts/:year/'
+    month: '/posts/:year/:month/'
+    day: '/posts/:year/:month/:day/'
+    tag: '/posts/tag/:name/'
+    category: '/posts/category/:name/'

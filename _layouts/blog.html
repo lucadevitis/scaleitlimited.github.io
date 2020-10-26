@@ -1,0 +1,38 @@
+---
+title: Our blog
+subtitle: Let's share our perspectives
+layout: raw
+---
+	  <div id="wrap">
+
+{% include header.html container_class="container-fluid" logo_col_size="md-1" navbar_justify="left" %}
+		
+      <main id="content" class="content">
+		    <section class="titlebar titlebar-sm scheme-light text-center" data-parallax="true" data-parallax-options='{ "parallaxBG": true }' style="background-image: url(/assets/img/bg/bg-31.jpg);">
+          <div class="liquid-row-overlay" style="background:rgba(9, 17, 35, 0.645)"></div>
+
+		    	<div class="titlebar-inner">
+		    		<div class="container titlebar-container">
+		    			<div class="row titlebar-container">
+		    				<div class="titlebar-col col-md-12">
+		    					<h1 class="text-white" data-fittext="true" data-fittext-options='{ "maxFontSize": 80, "minFontSize": 32 }'>{{ layout.title }}</h1>
+		    					<h2 class="text-white" data-fittext="true" data-fittext-options='{ "maxFontSize": 40, "minFontSize": 18 }'>{{ layout.subtitle }}</h2>
+		    				</div><!-- /.titlebar-col -->
+		    			</div><!-- /.titlebar-row -->
+		    		</div><!-- /.titlebar-container -->
+		    	</div><!-- /.titlebar-inner -->
+		    	
+		    </section><!-- /.titlebar -->
+        <section class="vc_row mt-40 mb-40">
+			    <div class="container">
+			    	<div class="row">
+			    		<div class="col-md-8">
+{{ content }}
+				  	  </div><!-- /.col-md-8 -->
+{% include posts-archive.html %}
+				    </div><!-- /.row -->
+			    </div><!-- /.container -->
+        </section>
+      </main><!-- /#content.content -->
+{% include footer.html %}
+    </div><!-- /#wrap -->
