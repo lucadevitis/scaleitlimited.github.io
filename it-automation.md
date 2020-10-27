@@ -20,19 +20,24 @@ IT operation to **IT Automation**:
 
 Define a simple and testable objective/outcome
 : Arguably the most important of the prerequisites. It cannot be stressed
-  enough that the outcome of an automated process needs to be defined and
-  testable so that you have a clear way to determine if the automated procedure
-  has been succesful.
+  enough that the outcome of an automated process needs to be simple, clearly
+  defined and testable so that you have a objective way to determine if the
+  automated procedure has been succesful.
+
+Choose complexity over convolution
+: Let every procedure to be small, do one simple thing and do it incredibly
+  well. Take the time to think about what you want yo achieve, break it down to
+  smaller pieces and tackle them one at the time.
+
+Prepare a contingency plan
+: Despite the amount of efforts and no matter how thorough your testing is,
+  things can go south pretty fast and pretty badly; that's where you need
+  to have a contingency plan, restore the previous state and start over.
 
 Encourage open involvement of all the stakeholders
 : Inputs and perspectives from all stakeholders is extremely important to
   understand the impact and all the ramification to the automated changes your
   procedure is going to apply.
-
-Prepare a fallback plan
-: Despite the amount of efforts and no matter how thorough your testing is,
-  things can go south pretty fast and pretty badly; that's where you need
-  to have a fallback plan, restore the previous state and start over.
 
 Choose the best practices and principles, over the tools
 : There is an abundance of technology that can help you achieve your
