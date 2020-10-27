@@ -57,12 +57,13 @@ Confidential
 Total dedication
 : We conduct our sessions from a calm and relaxed environment without any form
   of distraction; each session lasts an average of 30 minutes, and we want to
-  spend all that time to maximize your chances of success.
+  spend all that time to help you build the clarity and confidence you need to
+  achieve your objectives.
 
 Remember all your progresses
 : We encourage all the coachees to bring pen and paper to each session and take
   notes, but we know that something may slip through. Luckily, we record
-  each session and make it available to our coachees.
+  each session and make them available to our coachees.
 
 ## What can we coach you for?
 IT is the environment we love, and we want to see thrive, and for that reason we
