@@ -1,0 +1,232 @@
+---
+layout: raw
+---
+{% assign author = site.people | where: "username", page.author | first %}
+
+  <div id="wrap">
+{% include header.html container_class="container-fluid" logo_col_size="md-1" navbar_justify="left" %}
+    
+    <main id="content" class="content py-0">
+      
+      <div class="blog-single-cover scheme-light" data-fullheight="true" data-inview="true" data-inview-options='{ "onImagesLoaded": true }' style="background-color: #666871;">
+
+        <figure class="blog-single-media" data-responsive-bg="true" data-parallax="true" data-parallax-options='{ "parallaxBG": true, "triggerHook": "onLeave" }' data-parallax-from='{ "translateY": "0%" }' data-parallax-to='{ "translateY": "20%" }'>
+          <img src="{{ page.banner }}" alt="Banner">
+        </figure>
+        
+        <div class="blog-single-details">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                
+                <header class="entry-header blog-single-header" data-parallax="true" data-parallax-to='{ "opacity": 0, "translateY": "30%" }' data-parallax-options='{ "triggerHook": "0.3" }'>
+                  <h1 class="blog-single-title entry-title" data-split-text="true" data-split-options='{ "type": "lines" }'>{{ page.title }}</h1>
+                </header><!-- /.blog-single-header -->
+                
+              </div><!-- /.col-md-6 -->
+              <div class="col-md-2">
+                <div class="post-meta mb-30">
+                  <span class="byline">
+                    <span class="block text-uppercase ltr-sp-1">Author:</span>
+                    <span class="author vcard">
+                      <a class="url fn n" href="{{ author.url }}">{{ author.name }}</a>
+                    </span>
+                  </span>
+                </div><!-- /.post-meta -->
+              </div><!-- /.col-md-2 -->
+              <div class="col-md-2">
+                <div class="post-meta mb-30">
+                  <span class="posted-on">
+                    <span class="block text-uppercase ltr-sp-1">Published on:</span>
+                    <time class="entry-date published updated" datetime="{{ page.date }}">
+                    {% assign published_on = page.date | date_to_long_string: "ordinal" %}
+                    {% assign published_on_size = published_on | size | minus: 5 %}
+                      <a href="/posts/{{ page.date | date: "%Y/%m" }}/" rel="bookmark">{{ published_on | slice: 0, published_on_size }}</a>,
+                      <a href="/posts/{{ page.date | date: "%Y" }}/" rel="bookmark">{{ page.date | date: "%Y" }}</a>
+                    </time>
+                  </span>
+                </div><!-- /.post-meta -->
+              </div><!-- /.col-md-2 -->
+              <div class="col-md-8">
+                <div class="post-meta mb-30">
+                  <span class="cat-links">
+                    <span class="block text-uppercase ltr-sp-1">Published in:</span>
+                    {% for category in page.categories %}
+                    <a href="/posts/category/{{ category }}/" rel="category tag">{{ category | capitalize }}</a>{% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                  </span>
+                </div><!-- /.post-meta -->
+              </div><!-- /.col-md-2 -->
+              <div class="col-md-12">
+                <div class="post-meta">
+                  <span class="tags-links">
+                    <span class="block text-uppercase ltr-sp-1 mb-10">Tagged with:</span>
+                    {% for tag in page.tags %}
+                    <a style="border-color: white;" href="/posts/tag/{{ tag }}/" rel="category tag">{{ tag }}</a>
+                    {% endfor %}
+                  </span>
+                </div><!-- /.post-meta -->
+              </div><!-- /.col-md-2 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+          
+        </div><!-- /.blog-single-details -->
+        
+      </div><!-- /.blog-single-cover -->
+      
+      <article class="blog-single">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="blog-single-content entry-content pull-up expanded">
+                <p class="add-dropcap">
+                  {{ page.excerpt | strip_html }}
+                </p>
+                
+                <!--
+
+                Example fullwidth image:
+
+                <div class="fullwidth">
+                  <figure>
+                    <img src="/assets/posts/image/path" alt="example alternative text">
+                    <figcaption>Example caption</figcaption>
+                  </figure>
+                </div>
+
+                Example stretch-to-sides images:
+
+                <div class="stretch-to-sides">
+                  <div class="row">
+                    
+                    <div class="col-md-6">
+                      <figure>
+                        <img src="/assets/posts/image/path" alt="example alternate text">
+                        <figcaption>Example caption</figcaption>
+                      </figure>
+                    </div>
+                    <div class="col-md-6">
+                      <figure>
+                        <img src="/assets/posts/image/path" alt="example alternate text">
+                        <figcaption>Example caption</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                -->
+
+              {{ page.content | remove: page.excerpt }}  
+
+              </div><!-- /.blog-single-content entry-content -->
+              
+              <footer class="blog-single-footer entry-footer">
+                
+                <span class="share-links">
+                  <span class="text-uppercase ltr-sp-1">Share On</span>
+                  <ul class="social-icon circle branded social-icon-sm">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  </ul><!-- /.social-icon -->
+                </span><!-- /.share-links -->
+                
+              </footer><!-- /.blog-single-footer entry-footer -->
+              
+              <div class="post-author">
+                
+                <figure>
+                  <img src="{{ author.avatar }}" alt="avatar">
+                </figure>
+                <div class="post-author-info clearfix">
+                  <h3><a href="{{ author.url }}">{{ author.name }}</a></h3>
+                  <h6>{{ autor.role }}</h6>
+                  {{ author.excerpt }}
+                </div><!-- /.post-author-info -->
+                
+              </div><!-- /.post-author -->
+              
+            </div><!-- /.col-md-8 -->
+            
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+        
+        <div id="comments" class="comments-area">
+          
+          <div id="respond" class="comment-respond filled">
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  
+                  <h3 id="reply-title" class="comment-reply-title">Leave a comment</h3>
+                  
+                  <form action="#" method="post" id="commentform" class="comment-form" novalidate="">
+                    <!-- <p class="comment-notes">
+                      <span id="email-notes">Your email address will not be published.</span> Required fields are marked
+                      <span class="required">*</span>
+                    </p> -->
+                    <div class="row">
+                      <div class="col-md-4 col-sm-6">
+                        <p class="comment-form-author">
+                          <input id="author" name="author" type="text" size="30" maxlength="245" aria-required="true" required="required">
+                          <span class="input-placeholder"
+                          data-split-text="true" data-split-options='{ "type": "chars" }'
+                          data-custom-animations="true"
+                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "input", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
+                          >Name*</span>
+                        </p>
+                      </div><!-- /.col-md-4 col-sm-6 -->
+                      <div class="col-md-4 col-sm-6">
+                        <p class="comment-form-email">
+                          <input id="email" name="email" type="email" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required">
+                          <span class="input-placeholder"
+                          data-split-text="true" data-split-options='{ "type": "chars" }'
+                          data-custom-animations="true"
+                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "input", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
+                          >Email*</span>
+                        </p>
+                      </div><!-- /.col-md-4 col-sm-6 -->
+                      <div class="col-md-4 col-sm-12">
+                        <p class="comment-form-url">
+                          <input id="url" name="url" type="url" size="30" maxlength="200">
+                          <span class="input-placeholder"
+                          data-split-text="true" data-split-options='{ "type": "chars" }'
+                          data-custom-animations="true"
+                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "input", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
+                          >Website</span>
+                        </p>
+                      </div><!-- /.col-md-4 col-sm-12 -->
+                      <div class="col-sm-12">
+                        <p class="comment-form-comment">
+                          <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" aria-required="true" required="required"></textarea>
+                          <span class="input-placeholder"
+                          data-split-text="true" data-split-options='{ "type": "chars" }'
+                          data-custom-animations="true"
+                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "textarea", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
+                          >Comment*</span>
+                        </p>
+                      </div><!-- /.col-sm-12 -->
+                      <div class="col-sm-12 text-right">
+                        <p class="form-submit">
+                          <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                        </p>
+                      </div><!-- /.col-sm-12 -->
+                    </div><!-- /.row -->
+                  </form>
+                  
+                </div><!-- /.col-md-8 col-md-offset-2 -->
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+            
+          </div><!-- /.comment-form -->
+        </div><!-- /.comments-area -->
+        
+      </article><!-- /.blog-single -->
+      
+    </main><!-- /#content.content -->
+
+{% include footer.html %}
+  
+  </div><!-- /#wrap -->

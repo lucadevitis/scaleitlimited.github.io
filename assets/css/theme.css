@@ -12207,7 +12207,7 @@ div:not(.carousel-item-inner) > .liquid-img-group-container .liquid-img-group-si
   z-index: 1;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/misc/browser-bar.jpg");
+  background-image: url("/assets/img/misc/browser-bar.jpg");
   background-position: center top;
 }
 .liquid-img-group-browser figure {
@@ -13804,7 +13804,7 @@ ul.pagination .page-numbers.current {
   margin-left: -30px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: url(../img/spinners/spinner-4-light.svg);
+  background-image: url(/assets/img/spinners/spinner-4-light.svg);
   background-size: 35px;
   background-position: center;
   background-repeat: no-repeat;
@@ -17159,7 +17159,7 @@ ol.breadcrumb.text-darker a:hover {
 }
 
 .lqd-vbg-loader {
-  background-image: url(../img/spinners/spinner-1.gif);
+  background-image: url(/assets/img/spinners/spinner-1.gif);
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
@@ -17667,11 +17667,11 @@ ol.breadcrumb.text-darker a:hover {
   visibility: hidden;
 }
 .row-bg-loader.style-2 {
-  background-image: url(../img/spinners/spinner-1.gif);
+  background-image: url(/assets/img/spinners/spinner-1.gif);
   background-size: 80px;
 }
 .row-bg-loader.style-3 {
-  background-image: url(../img/spinners/spinner-2.gif);
+  background-image: url(/assets/img/spinners/spinner-2.gif);
 }
 
 .row-bg-wrap,

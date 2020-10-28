@@ -1,38 +1,43 @@
 ---
 layout: blog
+excerpt_separator: "<!--more-->"
 ---
+
+{% for post in site.posts limit:2 %}
+{% assign author = site.people | where: "username", post.author | first %}
 			    			<div class="liquid-blog-posts">
 			    				<div class="liquid-blog-grid liquid-blog-style-classic row">
 
 			    						<article class="liquid-lp liquid-blog-item liquid-blog-item-grid liquid-blog-scheme-dark mb-50">
 			    							<figure class="liquid-lp-media">
-			    								<a href="#">
-			    									<img src="./assets/demo/blog/blog-1.jpg" alt="Lates Post">
+			    								<a href="{{ post.url }}">
+			    									<img src="{{ post.banner }}" alt="banner">
 			    								</a>
 			    							</figure>
 			    							<div class="liquid-blog-item-inner">
-			    								<a href="#" class="liquid-overlay-link">Business meeting 2017 in San Francisco</a>
+			    								<a href="{{ post.url }}" class="liquid-overlay-link">{{ post.title }}</a>
 			    								<header class="liquid-lp-header">
-			    									<h2 class="liquid-lp-title font-weight-bold h3 size-sm">
-			    										<a href="#" data-split-text="text" data-split-options='{ "type": "lines" }'>Business meeting 2017 in San Francisco</a>
-			    									</h2>
+			    									<h3 class="mb-10 mt-10">
+			    										<a style="text-decoration: none;" href="{{ post.url }}" data-split-text="text" data-split-options='{ "type": "lines" }'>{{ post.title }}</a>
+			    									</h3>
 			    									<div class="liquid-lp-details">
-			    										<time class="liquid-lp-date" datetime="2017-09-25">5 hours ago</time>
+                              <span class="block ltr-sp-1">Published on </span>
+			    										<time class="liquid-lp-date" datetime="{{ post.date }}">{{ post.date | date_to_long_string: "ordinal" }}</time>
 			    										in
-			    										<ul class="liquid-lp-category">
-			    											<li><a href="#">Business</a></li>
-			    										</ul>
+			    										<span style="text-transform: capitalize" class="liquid-lp-category">
+                                {{ post.categories | join: ", " }}
+                              </span>
 			    									</div><!-- /.liquid-lp-details -->
 			    								</header>
 			    								<div class="liquid-lp-excerpt">
-			    									<p>One of my favourite things I like to watch is the bloopers and outtakes that are shown of mistakes made during the making of a movie.</p>
+			    									{{ post.excerpt }}
 			    								</div><!-- /.latest-post-excerptc -->
 			    								<footer class="liquid-lp-footer">
-			    									<a href="#" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">
-			    										<span>
-			    											<span class="btn-line btn-line-before"></span>
+			    									<a href="{{ post.ulr }}" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">
+			    										<span class="text-secondary">
+			    											<span class="btn-line bg-secondary btn-line-before"></span>
 			    											<span class="btn-txt">Continue Reading</span>
-			    											<span class="btn-line btn-line-after"></span>
+			    											<span class="btn-line bg-secondary btn-line-after"></span>
 			    										</span>
 			    									</a>
 			    								</footer>
@@ -41,3 +46,4 @@ layout: blog
 
 				  			  </div><!-- /.liquid-blog-grid liquid-blog-style-classic row -->
 				  		  </div><!-- /.liquid-blog-posts -->
+{% endfor %}

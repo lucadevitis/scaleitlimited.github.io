@@ -12,6 +12,10 @@ body {
  font-family: 'Cardo', serif;
 }
 
+.post-meta a:hover {
+  border-bottom: 1px solid;
+}
+
 dt,
 h1, .h1,
 h2, .h2,
