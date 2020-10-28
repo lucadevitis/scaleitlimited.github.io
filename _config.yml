@@ -46,6 +46,7 @@ collections_dir: collections
 collections:
   posts:
     output: true
+    permalink: /posts/:categories/:year/:month/:day/:title:output_ext
   people:
     output: true
   case_studies:
@@ -58,6 +59,7 @@ collections:
     output: true
   resources:
     output: true
+    permalink: /resources/:categories/:title:output_ext
 
 # Handling Reading
 safe: true
@@ -83,7 +85,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 strict_front_matter: false
 
 page_excerpts: true
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 
 # Filtering Content
 show_drafts: null
