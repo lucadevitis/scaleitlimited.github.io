@@ -2,44 +2,45 @@
         <div class="container">
 
           <div class="row">
-
             <div class="lqd-column col-md-6 col-md-offset-3">
-
               <header class="fancy-title text-center mb-60">
                 <h2>Latest Posts</h2>
               </header>
-
             </div><!-- /.lqd-column col-md-6 col-md-offset-3 -->
-
           </div><!-- /.row -->
 
           <div class="row">
-
             <div class="liquid-blog-posts">
               <div class="liquid-blog-grid row">
 {% for post in site.posts limit:2 %}
 {% assign author = site.people | where: "username", post.author | first %}
                 <div class="lqd-column col-md-6 px-4">
 
-                  <article class="liquid-lp liquid-lp-time-aside">
+                  <figure class="liquid-lp-media">
+                    <a href="{{ post.url }}">
+                      <img src="{{ post.cover_small }}" alt="cover">
+                    </a>
+                  </figure>
+                  <article class="liquid-lp liquid-lp-time-aside liquid-blog-item liquid-blog-scheme-dark">
                     <time class="entry-date published updated liquid-lp-date" datetime="{{ post.date }}">{{ post.date | date: "<span>%d</span> %b"}}</time>
                     <header class="liquid-lp-header">
-                      <h2 class="entry-title liquid-lp-title h5">
+                      <h3 class="mb-10 mt-10">
                         <a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
-                      </h2>
+                      </h3>
                     </header>
                     <div class="liquid-lp-excerpt entry-summary ">
                       <p>{{ post.excerpt }}</p>
                     </div><!-- /.liquid-lp-excerpt -->
                     <footer class="liquid-lp-footer">
-                      <div class="liquid-lp-meta">
-                        <span class="author vcard">
-                          <span class="screen-reader-text">Author</span>
-                          <a class="url fn n" href="{{ author.url }}">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="12" stroke="#a7a9b8"> <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M12,12L12,12 c-2.761,0-5-2.239-5-5V6c0-2.761,2.239-5,5-5h0c2.761,0,5,2.239,5,5v1C17,9.761,14.761,12,12,12z" stroke-linejoin="miter"></path> <path data-color="color-2" fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M22,20.908 c0-1.8-1.197-3.383-2.934-3.856C17.172,16.535,14.586,16,12,16s-5.172,0.535-7.066,1.052C3.197,17.525,2,19.108,2,20.908V23h20 V20.908z" stroke-linejoin="miter"></path> </svg>
-                            {{ author.name }}</a>
-                        </span>
-                      </div><!-- /.liquid-lp-meta -->
+                      <div class="liquid-lp-meta col-sm-6 col-sm-offset-6 col-md-8 col-md-offset-4">
+			    						  <a href="{{ post.url }}" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">
+			    						  	<span>
+			    						  		<span class="btn-line btn-line-before"></span>
+			    						  		<span class="btn-txt text-secondary text-hover-primary">Continue Reading</span>
+			    						  		<span class="btn-line btn-line-after"></span>
+			    						  	</span>
+			    						  </a>
+                      </div>
                     </footer>
                   </article>
 

@@ -3,17 +3,18 @@ layout: blog
 excerpt_separator: "<!--more-->"
 ---
 
-{% for post in site.posts limit:2 %}
+{% for post in site.posts limit:10 %}
 {% assign author = site.people | where: "username", post.author | first %}
 			    			<div class="liquid-blog-posts">
 			    				<div class="liquid-blog-grid liquid-blog-style-classic row">
 
-			    						<article class="liquid-lp liquid-blog-item liquid-blog-item-grid liquid-blog-scheme-dark mb-50">
-			    							<figure class="liquid-lp-media">
-			    								<a href="{{ post.url }}">
-			    									<img src="{{ post.banner }}" alt="banner">
-			    								</a>
-			    							</figure>
+			    						<figure class="liquid-lp-media">
+			    							<a href="{{ post.url }}">
+			    								<img src="{{ post.cover_small }}" alt="cover">
+			    							</a>
+			    						</figure>
+			    						<article class="col-md-12 col-sm-12 liquid-lp liquid-lp-time-aside liquid-blog-item liquid-blog-item-grid liquid-blog-scheme-dark mb-50">
+                        <time class="entry-date published updated liquid-lp-date" datetime="{{ post.date }}">{{ post.date | date: "<span>%d</span> %b"}}</time>
 			    							<div class="liquid-blog-item-inner">
 			    								<a href="{{ post.url }}" class="liquid-overlay-link">{{ post.title }}</a>
 			    								<header class="liquid-lp-header">
@@ -21,25 +22,32 @@ excerpt_separator: "<!--more-->"
 			    										<a style="text-decoration: none;" href="{{ post.url }}" data-split-text="text" data-split-options='{ "type": "lines" }'>{{ post.title }}</a>
 			    									</h3>
 			    									<div class="liquid-lp-details">
-                              <span class="block ltr-sp-1">Published on </span>
-			    										<time class="liquid-lp-date" datetime="{{ post.date }}">{{ post.date | date_to_long_string: "ordinal" }}</time>
-			    										in
+                              <span class="block ltr-sp-1">Published in</span>
 			    										<span style="text-transform: capitalize" class="liquid-lp-category">
                                 {{ post.categories | join: ", " }}
                               </span>
 			    									</div><!-- /.liquid-lp-details -->
 			    								</header>
-			    								<div class="liquid-lp-excerpt">
+			    								<main class="liquid-lp-excerpt">
 			    									{{ post.excerpt }}
-			    								</div><!-- /.latest-post-excerptc -->
+			    								</main><!-- /.latest-post-excerptc -->
 			    								<footer class="liquid-lp-footer">
-			    									<a href="{{ post.ulr }}" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">
-			    										<span class="text-secondary">
-			    											<span class="btn-line bg-secondary btn-line-before"></span>
-			    											<span class="btn-txt">Continue Reading</span>
-			    											<span class="btn-line bg-secondary btn-line-after"></span>
-			    										</span>
-			    									</a>
+                            <div class="col-md-6 col-sm-6 liquid-lp-meta">
+                              <span class="author vcard">
+                                <span class="screen-reader-text">Author</span>
+                                <i class="icon-md-person"></i>
+                                <a class="text-secondary text-hover-primary" href="{{ author.url }}">{{ author.name }}</a>
+                              </span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 liquid-lp-meta">
+			    									  <a href="{{ post.url }}" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more">
+			    									  	<span>
+			    									  		<span class="btn-line btn-line-before"></span>
+			    									  		<span class="btn-txt text-secondary text-hover-primary">Continue Reading</span>
+			    									  		<span class="btn-line btn-line-after"></span>
+			    									  	</span>
+			    									  </a>
+                            </div>
 			    								</footer>
 			    							</div><!-- /.liquid-blog-item-inner -->
 			    						</article>

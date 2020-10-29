@@ -5,6 +5,8 @@ date: 2020-09-13 18:17:37 +0100
 categories: jekyll update
 tags: jekyll update
 author: luca.devitis
+cover: /assets/img/posts/cover-cup-n-hello-mobile-01.jpg
+cover_small: /assets/img/posts/small-cover-cup-n-hello-mobile-01.jpg
 
 ---
 Here is a small excerpt for this post
