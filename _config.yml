@@ -34,7 +34,7 @@ plugins:
 # Where things are
 source: .
 destination: _site
-collections_dir: collections
+# collections_dir: collections
 # plugins_dir:
 #   - _plugins
 # layouts_dir: _layouts
