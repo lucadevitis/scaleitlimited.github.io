@@ -52,6 +52,11 @@ dt {
   background-color: var(--color-secondary);
 }
 
+&:focus {
+  outline: 3px solid var(--color-primary);
+  border-color: transparent;
+}
+
 .h1, h1 {
   font-size: 55px;
   font-weight: 700;
@@ -94,7 +99,7 @@ dt {
 .contact-form select:focus,
 .contact-form textarea:focus,
 .contact-form .ui-selectmenu-button:focus {
-  color: #fff;
+  color: #181b31;
 }
 
 .main-footer {
