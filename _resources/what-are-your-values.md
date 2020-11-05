@@ -1,21 +1,21 @@
 ---
 layout: document
 title: What are your values?
-synopsis: >-
-  This is a thought provoking exercise: think about the values that you feel are
-  most important to you. This exercise is about taking the time to explore
-  yourself, your values and what you stand for.
-topic: coaching
+categories: coaching
 
 ---
 
-# {{ page.title }}
+This is a thought provoking exercise: think about the values that you feel are
+most important to you. This exercise is about taking the time to explore
+yourself, your values and what you stand for.
+<!--more-->
 
 As a coach, it’s important to understand how you view the world in general and
 yourself in particular. Each person has a unique way of thinking and a unique
-way of interacting with those around them. {{ page.synopsis }} It may take you
-several hours or days to compose your responses to this exercise so please
-feel free to keep revisiting your exercise.
+way of interacting with those around them.
+
+It may take you several hours or days to compose your responses to this
+exercise so please feel free to keep revisiting your exercise.
 
 ## Steps
 

@@ -1,0 +1,22 @@
+---
+title: Help yourself
+layout: leaflet
+excerpt_separator: "<!--more-->"
+---
+      <section class="vc_row py-40">
+        <div class="container">
+          <div class="row">
+{%- for resource in site.resources -%}
+            <div class="lqd-column col-md-4 col-sm-6">
+              <div class="liquid-lp iconbox iconbox-side iconbox-round iconbox-shadow iconbox-heading-sm">
+                <div class="contents">
+                  <h3 class="font-weight-semibold">{{ resource.title }}</h3>
+                  <p>{{ resource.excerpt }}</p>
+                  <a class="liquid-overlay-link" href="{{ resource.url }}">Read more</a>
+                </div>
+              </div>
+            </div>
+{%- endfor -%}
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>

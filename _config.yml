@@ -59,7 +59,7 @@ collections:
     output: true
   resources:
     output: true
-    permalink: /resources/:categories/:title:output_ext
+    permalink: /:categories/resources/:title:output_ext
 
 # Handling Reading
 safe: true

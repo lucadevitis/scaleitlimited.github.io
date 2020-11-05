@@ -152,82 +152,11 @@ layout: raw
             
           </div><!-- /.row -->
         </div><!-- /.container -->
-        
-        <div id="comments" class="comments-area">
-          
-          <div id="respond" class="comment-respond filled">
-            
-            <div class="container">
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                  
-                  <h3 id="reply-title" class="comment-reply-title">Leave a comment</h3>
-                  
-                  <form action="#" method="post" id="commentform" class="comment-form" novalidate="">
-                    <!-- <p class="comment-notes">
-                      <span id="email-notes">Your email address will not be published.</span> Required fields are marked
-                      <span class="required">*</span>
-                    </p> -->
-                    <div class="row">
-                      <div class="col-md-4 col-sm-6">
-                        <p class="comment-form-author">
-                          <input id="author" name="author" type="text" size="30" maxlength="245" aria-required="true" required="required">
-                          <span class="input-placeholder"
-                          data-split-text="true" data-split-options='{ "type": "chars" }'
-                          data-custom-animations="true"
-                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "input", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
-                          >Name*</span>
-                        </p>
-                      </div><!-- /.col-md-4 col-sm-6 -->
-                      <div class="col-md-4 col-sm-6">
-                        <p class="comment-form-email">
-                          <input id="email" name="email" type="email" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required">
-                          <span class="input-placeholder"
-                          data-split-text="true" data-split-options='{ "type": "chars" }'
-                          data-custom-animations="true"
-                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "input", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
-                          >Email*</span>
-                        </p>
-                      </div><!-- /.col-md-4 col-sm-6 -->
-                      <div class="col-md-4 col-sm-12">
-                        <p class="comment-form-url">
-                          <input id="url" name="url" type="url" size="30" maxlength="200">
-                          <span class="input-placeholder"
-                          data-split-text="true" data-split-options='{ "type": "chars" }'
-                          data-custom-animations="true"
-                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "input", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
-                          >Website</span>
-                        </p>
-                      </div><!-- /.col-md-4 col-sm-12 -->
-                      <div class="col-sm-12">
-                        <p class="comment-form-comment">
-                          <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" aria-required="true" required="required"></textarea>
-                          <span class="input-placeholder"
-                          data-split-text="true" data-split-options='{ "type": "chars" }'
-                          data-custom-animations="true"
-                          data-ca-options='{ "triggerHandler": "focus", "triggerTarget": "textarea", "triggerRelation": "siblings", "offTriggerHandler": "blur", "animationTarget": "all-childs", "delay": 50, "animations": { "translateY": "-20%", "rotateX": -45, "opacity": 0 } }'
-                          >Comment*</span>
-                        </p>
-                      </div><!-- /.col-sm-12 -->
-                      <div class="col-sm-12 text-right">
-                        <p class="form-submit">
-                          <input name="submit" type="submit" id="submit" class="submit" value="Submit">
-                        </p>
-                      </div><!-- /.col-sm-12 -->
-                    </div><!-- /.row -->
-                  </form>
-                  
-                </div><!-- /.col-md-8 col-md-offset-2 -->
-              </div><!-- /.row -->
-            </div><!-- /.container -->
-            
-          </div><!-- /.comment-form -->
-        </div><!-- /.comments-area -->
-        
       </article><!-- /.blog-single -->
       
     </main><!-- /#content.content -->
 
+{% include formbutton.html %}
 {% include footer.html %}
   
   </div><!-- /#wrap -->

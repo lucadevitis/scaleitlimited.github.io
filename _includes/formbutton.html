@@ -1,0 +1,91 @@
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    /*  title:        "Comment",
+        description:  "Thank you for taking the time to share your perspective with us." */
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {
+      action: "https://formspree.io/f/mnqopzdl",
+      title: "Get in touch",
+      description: "We'll get back to you as soon as possible.",
+      theme: "classic",
+      styles: {
+        fontFamily:'"Casdo", serif',
+        button: {
+          background: "#002569"
+        },
+        title: {
+          fontFamily:'"Oswald", sans-serif',
+          background: "transparent",
+          textTransform: "uppercase",
+          color: "#F5793B"
+        },
+        description: {
+          color: "white",
+          background: "transparent",
+        },
+        modal: {
+          backgroundImage: "url(/assets/img/bg/bg-26.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "right top"
+        },
+        body: {
+          color: "white"
+        },
+        submitInput: {
+          fontFamily:'"Oswald", sans-serif',
+          backgroundImage: "linear-gradient(to right, #ef4236 , #fbae40)",
+          textTransform: "uppercase",
+          width: "100%",
+          color: "#002569"
+        }
+      },
+      fields: [
+        { label:  "",         type: "hidden",   name: "_subject", value: "{{ page.title }}" },
+        { label:  "Name",     type: "text",     name: "name",     placeholder: "Your Name ",          required: true },
+        { label:  "Email",    type: "email",    name: "_replyto", placeholder: "Your Email Address", required: true },
+        { label:  "Message",  type: "textarea", name: "message",  placeholder: "Your Message",        required: true },
+        { label:  "",         type: "submit",   name: "",         value: "Send"}
+      ]
+    })
+  </script>
+      <!--
+      <section class="vc_row py-40">
+        <div class="container">
+
+          <div class="row" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":".lqd-column","duration":"1200","delay":"160","easing":"easeOutQuint","direction":"forward","initValues":{"translateX":-37,"opacity":0},"animations":{"translateX":0,"opacity":1}}'>
+
+            <div class="lqd-column col-md-8 col-md-offset-2">
+
+              <div class="lqd-column-inner pt-40 pb-20 px-3 px-lg-5 bg-cover" style="background-image: url(/assets/img/bg/bg-26.jpg);">
+
+                <header class="fancy-title">
+                  <h3 class="my-0 text-primary">Let us know</h3>
+                </header>
+  
+                <div class="contact-form contact-form-inputs-sm contact-form-inputs-underlined contact-form-button-md contact-form-button-block">
+                  <form action="https://formspree.io/f/mnqopzdl" method="post" novalidate="novalidate">
+                    <div class="row">
+                      <div class="lqd-column col-md-12">
+                        <input type="hidden" name="_subject" value="{{ page.title }}">
+                        <input type="text" name="name" aria-required="true" aria-invalid="false" placeholder="Your Name " required>
+                        <input type="email" name="_replyto" aria-required="true" aria-invalid="false" placeholder="Your E-mail Address" required>
+                        <textarea cols="10" rows="3" name="message" aria-required="true" aria-invalid="false" placeholder="Your Message" required></textarea>
+                        <input type="submit" value="Send" class="h6 bg-gradient-primary-br text-dark w-100">
+                      </div>
+                    </div>
+                  </form>
+                  <div class="contact-form-result">
+                    <p class="form-message form-success hidden">Thank you for your message, we will get back to you as soon as possible!</p>
+                    <p class="form-message form-error hidden">Sorry, unfortunately something went wrong. Please, try again later or use another way of contacting us.</p>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      -->

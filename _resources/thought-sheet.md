@@ -1,19 +1,18 @@
 ---
 layout: document
 title: Thought sheet
-synopsis: >-
-  This is a thought provoking exercise: a set of “pondering” questions designed
-  to stimulate your thinking, to reflect on yourself, and help get the most
-  out of your coaching sessions.
-topic: coaching
+categories: coaching
 
 ---
 
-# {{ page.title }}
+This is a thought provoking exercise: a set of “pondering” questions designed
+to stimulate your thinking, to reflect on yourself, and help get the most
+out of your coaching sessions.
+<!--more-->
 
 It’s important for your coach to understand how you view the world in general and
 yourself in particular. Each person has a unique way of thinking and a unique
-way of interacting with those around them. {{ page.synopsis }} 
+way of interacting with those around them.
 
 ## Questions
 It may take you several hours or days to compose your responses to these

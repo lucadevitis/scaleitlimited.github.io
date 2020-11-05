@@ -1,18 +1,14 @@
 ---
 layout: document
 title: Check-In Conversation Template
-synopsis: >-
-  Regular, future-focused check-in conversations are essential for sustaining
-  a high performing team. This document provides a structure for your
-  check-in conversations and offers a framework for capturing issues
-  at different levels, while talking about agreed actions and objectives.
-topics:
-  - it_performance
+categories: it performance
 
 ---
-
-Synopsis
-: {{ page.synopsis }}
+Regular, future-focused check-in conversations are essential for sustaining a
+high performing team. This document provides a structure for your check-in
+conversations and offers a framework for capturing issues at different levels,
+while talking about agreed actions and objectives.
+<!--more-->
 
 Intended audience
 : We intend to reach for Managers and Leaders who have team members working
@@ -50,8 +46,6 @@ Caveats
     benefit from.
   - If you'd rather avoid to have the conversation resulting from any of the
     following questions, you could find some benefit from confidence coaching.
-
-# {{ page.title }}
 
 ## Reflections
 
